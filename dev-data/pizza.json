@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Pizza Quataro Formaggi",
+    "category": "pizza",
+    "qty": 100,
+    "restaurant_name": "Pizza Hut",
+    "restaurant": "624977e6df249825f2145511",
+    "img": "https://i.imgur.com/hcNPGxR.png",
+    "description": "Pecorino smellY cheese melted cheese",
+    "story": "Gummi bears topping pie pastry bonbon cupcake caramels. Muffin muffin jujubes donut",
+    "price": 6.99
+  },
+  {
+    "name": "Pizza Napoltana Tonno",
+    "category": "pizza",
+    "qty": 100,
+    "restaurant_name": "Pizza Hut",
+    "restaurant": "624977e6df249825f2145511",
+    "img": "https://i.imgur.com/eZCJv41.png",
+    "description": "Pecorino smellY cheese melted cheese",
+    "story": "Gummi bears topping pie pastry bonbon cupcake caramels. Muffin muffin jujubes donut",
+    "price": 7.99
+  },
+  {
+    "name": "Pizza taglio Charle",
+    "category": "pizza",
+    "restaurant_name": "Pizza Hut",
+    "qty": 100,
+    "restaurant": "624977e6df249825f2145511",
+    "img": "https://i.imgur.com/NOHbpzT.png",
+    "description": "Pecorino smellY cheese melted cheese",
+    "story": "Gummi bears topping pie pastry bonbon cupcake caramels. Muffin muffin jujubes donut",
+    "price": 6.99
+  },
+  {
+    "name": "Pizza Diavola Hawaiian",
+    "category": "pizza",
+    "qty": 100,
+    "restaurant_name": "Pizza Hut",
+    "restaurant": "624977e6df249825f2145511",
+    "img": "https://i.imgur.com/E4kySE8.png",
+    "description": "Pecorino smellY cheese melted cheese",
+    "story": "Gummi bears topping pie pastry bonbon cupcake caramels. Muffin muffin jujubes donut",
+    "price": 8.99
+  },
+  {
+    "name": "Pizza Pesto Chicken",
+    "category": "pizza",
+    "qty": 100,
+    "restaurant_name": "Pizza Hut",
+    "restaurant": "624977e6df249825f2145511",
+    "img": "https://i.imgur.com/jxa94gA.png",
+    "description": "Pecorino smellY cheese melted cheese",
+    "story": "Gummi bears topping pie pastry bonbon cupcake caramels. Muffin muffin jujubes donut",
+    "price": 6.99
+  },
+  {
+    "name": "Pizza BBQ Amrikana",
+    "category": "pizza",
+    "qty": 100,
+    "restaurant_name": "Pizza Hut",
+    "restaurant": "624977e6df249825f2145511",
+    "img": "https://i.imgur.com/2Bs6I55.png",
+    "description": "Pecorino smellY cheese melted cheese",
+    "story": "Gummi bears topping pie pastry bonbon cupcake caramels. Muffin muffin jujubes donut",
+    "price": 7.99
+  }
+]

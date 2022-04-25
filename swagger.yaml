@@ -1,0 +1,560 @@
+openapi: 3.0.0
+info:
+  title: "Food Delivery Backend APIs"
+  version: 0.1.9
+  description: "This is our Food Delivery's App Server."
+  version: "1.0.0"
+  contact:
+    email: "abhishsusu@gmail.com"
+
+servers:
+  - url: http://localhost:8000/api/v1//
+    description: Locally Hosted
+  - url: https://urbaan-eatery.herokuapp.com/api/v1// 
+    description: Our Hosted Server
+
+tags:
+# - name: "Extended"
+#   description: "Foods Actions That can be performed From Restaurant and Admins"
+- name: "Restaurant"
+  description: "Everything About Restaurants"
+- name: "Orders"
+  description: "Everything About Our Orders "
+- name: "User"
+  description: "Everything About User"
+- name: "Foods"
+  description: "Everything About our Foods"
+
+components:
+  securitySchemes:
+    bearerAuth:            # arbitrary name for the security scheme
+      type: http
+      scheme: bearer
+      bearerFormat: JWT    # optional, arbitrary value for documentation purposes
+
+paths:
+#Foods
+  
+  food/foodItem:
+    get:
+      security:
+      - bearerAuth: [] 
+      tags:
+      - "Foods"
+      summary: Returns a list of all foods.
+      description: It returns us with all the foods that are present.
+      operationId: "foodItem"
+      responses:
+        '200':    # status code 
+          description: A JSON array of food items
+          content:
+            application/json:
+              schema: 
+                type: array
+                items: 
+                  type: string
+        '400':
+          description: "Invalid status value"
+  
+  food/foodItem/{id}:
+    get:
+      security:
+      - bearerAuth: [] 
+      tags:
+      - "Foods"
+      summary: "Find Food by ID"
+      description: "Returns a single Food"
+      operationId: "FoodById"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "ID of Food to return"
+        required: true
+        type: "integer"
+        format: "int64"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/Food"
+        "400":
+          description: "Invalid ID supplied"
+        "404":
+          description: "Food not found"
+
+  food/getFoodbyCategory/{category}:
+    get:
+      security:
+      - bearerAuth: []
+      tags:
+      - "Foods"
+      summary: "Get Food By Category"
+      parameters:
+      - in: "path"
+        name: "category"
+        description: "Food object that needs to be fetched"
+        required: true
+        # schema:
+        #   $ref: "#/definitions/Food"
+      responses:
+        "405":
+          description: "Invalid input"
+  
+  food/foodItem/{id}:
+    delete:
+      tags:
+      - "Foods"
+      summary: "Deletes a Food"
+      produces:
+        - "application/json"
+      parameters:
+      - name: id
+        in: path
+        description: "Food id to delete"
+        required: true
+        type: string
+      responses:
+        "400":
+          description: "Invalid ID supplied"
+        "404":
+          description: "Food not found"
+
+  #Restaurant
+  restaurant/getAllRestaurant:
+    get:
+      security:
+        - bearerAuth: []   
+      tags:
+      - "Restaurant"
+      summary: Returns a list of all Restaurants.
+      description: It returns us with all the Restaurants that are present.
+      operationId: "getAllRestaurants"
+      responses:
+        '200':    # status code 
+          description: A JSON array of Restaurants
+          content:
+            application/json:
+              schema: 
+                type: array
+                items: 
+                  type: string
+        '400':
+          description: "Invalid status value"
+
+  restaurant/getRestaurant/{id}:
+    get:
+      security:
+      - bearerAuth: [] 
+      tags:
+      - "Restaurant"
+      summary: "Find Restaurant by ID"
+      description: "Returns a single Restaurant"
+      operationId: "RestaurantById"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "ID of Restaurant to return"
+        required: true
+        type: "integer"
+        format: "int64"
+      responses:
+        "200":
+          description: "successful operation"
+        "400":
+          description: "Invalid ID supplied"
+        "404":
+          description: "Restaurant not found"
+
+  
+  restaurant/restaurantItems/{id}:
+    get:
+      security:
+      - bearerAuth: [] 
+      tags:
+      - "Restaurant"
+      summary: "Find Restaurant Item by ID"
+      description: "Returns a single Restaurant Items"
+      operationId: "RestaurantItemsById"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "ID of Restaurant Whose Items to return"
+        required: true
+        type: "integer"
+        format: "int64"
+      responses:
+        "200":
+          description: "successful operation"
+        "400":
+          description: "Invalid ID supplied"
+        "404":
+          description: "Restaurant not found"
+
+  restaurant/updateRestaurant/{id}:
+      patch:
+          security:
+          - bearerAuth: []
+          tags:
+          - "Restaurant"
+          summary: "Updated Restaurant"
+          description: "This can only be done by the Admin and Restaurant Owner."
+          operationId: "updateRestaurant"
+          produces:
+          - "application/xml"
+          - "application/json"
+          parameters:
+          - name: "id"
+            in: "path"
+            description: "id that need to be updated"
+            required: true
+            type: "string"
+          requestBody:
+            required: true
+            content:
+              application/json:
+                schema:
+                  $ref: "#/definitions/schemas/Restaurant"
+          responses:
+            "400":
+              description: "Invalid Restaurant supplied"
+            "404":
+              description: "Restaurant not found"
+
+  restaurant/createRestaurant:
+    post:
+      security:
+      - bearerAuth: [] 
+      tags:
+      - "Restaurant"
+      summary: "Add a new Restaurant to the store"
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/definitions/schemas/Restaurant"
+      responses:
+        "405":
+          description: "Invalid input"
+  
+  restaurant/deleteRestaurant/{id}:
+    delete:
+      security:
+      - bearerAuth: [] 
+      tags:
+      - "Restaurant"
+      summary: "Deletes a Restaurant"
+      parameters:
+      - name: "id"
+        in: path
+        description: "Restaurant id to delete"
+        required: true
+        type: string
+      responses:
+        "400":
+          description: "Invalid ID supplied"
+        "404":
+          description: "Restaurant not found"
+  
+  #Extended
+
+  food/foodItem:
+    post:
+      security:
+       - bearerAuth: [] 
+      tags:
+      - "Foods"
+      summary: "Add a new Food to the store"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/definitions/schemas/Food"
+      responses:
+        "405":
+          description: "Invalid input"
+
+  #Orders
+
+  order/pastOrders:
+    get:  
+      security:
+      - bearerAuth: []
+      tags:
+      - "Orders"
+      summary: Returns a list of all Past orders.
+      description: It returns us with all the Past Orders that are present.
+      operationId: "getAllPastOrders"
+      responses:
+        '200':    # status code 
+          description: A JSON array of Past orders
+          content:
+            application/json:
+              schema: 
+                type: array
+                items: 
+                  type: string
+        '400':
+          description: "Invalid status value"
+  
+  order/cancelOrder/{orderId}:
+      get:
+        security:
+        - bearerAuth: [] 
+        tags:
+        - "Orders"
+        summary: "Cancel order by ID"
+        description: "Cancelled Order Status"
+        operationId: "Order Cancel by id"
+        produces:
+        - "application/xml"
+        - "application/json"
+        parameters:
+        - name: "id"
+          in: "path"
+          description: "ID of Order to be cancelled"
+          required: true
+          type: "integer"
+          format: "int64"
+        responses:
+          "200":
+            description: "Successful operation"
+          "400":
+            description: "Invalid ID supplied"
+          "404":
+            description: "Order not found"
+      
+  order/placeOrder:
+    post:
+      security:
+        - bearerAuth: []
+      tags:
+      - "Orders"
+      summary: "Add a new Order to the store"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/definitions/schemas/Order"
+      responses:
+        "405":
+          description: "Invalid input"
+
+
+#USers
+  user/signup:
+    post:
+      tags:
+      - "User"
+      summary: "Add a new User to the App"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/definitions/schemas/User"
+      responses:
+        "405":
+          description: "Invalid input"
+
+  user/login:
+    post:
+      tags:
+      - "User"
+      summary: "Login to the store"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/definitions/schemas/User"
+      responses:
+        "405":
+          description: "Invalid input"
+
+  user/validateLogin:
+    get:
+      security:
+      - bearerAuth: [] 
+      tags:
+      - "User"
+      summary: Returns a validation.
+      description: It returns us with the validation.
+      operationId: "Validateuser"
+      responses:
+        '200':    # status code 
+          description: Valid User
+          content:
+            application/json:
+              schema: 
+                type: array
+                items: 
+                  type: string
+        '400':
+          description: "Invalid status value"
+
+  user/getMe:
+    get:
+      security:
+      - bearerAuth: [] 
+      tags:
+      - "User"
+      summary: Returns my Deatils.
+      description: It returns us with all the details that are present.
+      operationId: "foodItem"
+      responses:
+        '200':    # status code 
+          description: A JSON array of Details
+          content:
+            application/json:
+              schema: 
+                type: array
+                items: 
+                  type: string
+        '400':
+          description: "Invalid status value"
+    
+    # user/role/{id}/{role}:
+    #   get:
+    #     security:
+    #   - bearerAuth: [] 
+    #   tags:
+    #   - "User"
+    #   summary: Update Role
+    #   description: It updates a particular role with a particular id.
+    #   operationId: "updateRole"
+    #   parameters:
+    #     - name: "id"
+    #       in: "path"
+    #       description: "ID of User to be updated"
+    #       required: true
+    #       type: "integer"
+    #       format: "int64"
+    #     - role: "role"
+    #       in: "path"
+    #       description: "Role to be updated"
+    #       required: true
+    #       type: "string"
+    #       format: "string"
+    #   responses:
+    #     '200':    # status code 
+    #       description: A JSON array of Details
+    #       content:
+    #         application/json:
+    #           schema: 
+    #             type: array
+    #             items: 
+    #               type: string
+    #     '400':
+    #       description: "Invalid status value"
+
+definitions:
+  schemas:
+    Food:
+    type: "object"
+    properties:
+      name:
+        type: "string"
+        format: "int64"
+      restaurant:
+        type: "string"
+        format: "int64"
+      category:
+        type: "string"
+        format: "int32"
+      description:
+        type: "string"
+        format: "date-time"
+    
+    Restaurant:
+    type: "object"
+    properties:
+      name: 
+        type: "string"
+      phoneNumber: 
+        type: "string"
+      address: 
+        type: "string"
+    
+    Order:
+    type: "object"
+    properties:
+      address:
+        type: "string"
+      useId:
+        type: "string"
+      foodItems: 
+        type: array
+          itemId:
+          type: "string"
+        quantity:
+          type: "string"
+      totalPrice:
+        type: "string"
+      status:
+        type: "string"
+
+    User:
+    type: "object"
+    properties:
+      firstName: 
+        type: "string"
+      lastName:
+        type: "string"
+      role:
+        type: "string"
+      email:
+        type: "string"
+      googleUser:
+        type: "string"
+      password:
+        type: "string"
+      passwordConfirm:
+        type: "string"
+      address: 
+        type: "string"
+      phoneNumber:
+        type: "string"
+      active: 
+        type: "string"
+    # Food:
+    # type: "object"
+    # properties:
+    #   name:
+    #     type: "string"
+    #     format: "string"
+    #   restaurant:
+    #     type: "string"
+    #     format: "string"
+    #   category:
+    #     type: "string"
+    #     format: "string"
+    #   description:
+    #     type: "string"
+    #     format: "string"
+    #   story: 
+    #     type: "string"
+    #     format: "string"  
+    #   price: 
+    #     type: "integer"
+    #     format: "int64"
+    
+    
+      

@@ -1,0 +1,56 @@
+[
+    {
+        "name": "A Salt & Battery",
+        "category": "breakfast",
+        "phoneNumber": "(338) 2054-4803",
+        "address": "5th Floor 12th Square, Road No 12, Banjara Hills, Banjara Hills"
+    },
+    {
+        "name": "Burger's King",
+        "category": "burger",
+        "phoneNumber": "(303) 950-53083",
+        "address": "Santosh Nagar, Bandra West, Mumbai, Maharashtra"
+    },
+    {
+        "name": "Pizza Hut",
+        "category": "pizza",
+        "phoneNumber": "(928) 398-55000",
+        "address": "177-D, Defence Colony, Jajmau, UP"
+    },
+    {
+        "name": "Sandwich Bar",
+        "category": "sandwich",
+        "phoneNumber": "(317) 673-47576",
+        "address": "Kalady Malayattoor Rd, Malayattoor, Kerla"
+    },
+    {
+        "name": "Fasoos",
+        "category": "shawarma",
+        "phoneNumber": "(317) 673-4776",
+        "address": "Kalady Malayattoor Rd, Malayattoor, Kerla"
+    },
+    {
+        "name": "Cream Bell",
+        "category": "icecream",
+        "phoneNumber": "(317) 673-45776",
+        "address": "Kalady Malayattoor Rd, Malayattoor, Kerla"
+    },
+    {
+        "name": "The Salad Life",
+        "category": "lunch",
+        "phoneNumber": "(317) 673-45776",
+        "address": "Kalady Malayattoor Rd, Malayattoor, Kerla"
+    },
+    {
+        "name": "Drinker's Bar",
+        "category": "drinks",
+        "phoneNumber": "(928) 3985-5000",
+        "address": "177-D, Defence Colony, Jajmau, UP"
+    },
+    {
+        "name": " Grill & Chill",
+        "category": "dinner",
+        "phoneNumber": "(928) 5598-5000",
+        "address": "177-D, Defence Colony, Jajmau, UP"
+    }
+]

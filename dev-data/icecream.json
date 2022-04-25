@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Cayenne chocolate stracciatella",
+    "qty": 100,
+    "restaurant_name": "Cream Bell",
+    "restaurant": "624977e6df249825f2145514",
+    "category": "icecream",
+    "img": "https://i.imgur.com/L83RV4m.png",
+    "description": "Pecorino smellY cheese melted cheese",
+    "story": "Gummi bears topping pie pastry bonbon cupcake caramels. Muffin muffin jujubes donut",
+    "price": 2.99
+  },
+  {
+    "name": "Cardamom black pepper",
+    "category": "icecream",
+    "qty": 100,
+    "restaurant_name": "Cream Bell",
+    "restaurant": "624977e6df249825f2145514",
+    "img": "https://i.imgur.com/6jiLEnZ.png",
+    "description": "Pecorino smellY cheese melted cheese",
+    "story": "Gummi bears topping pie pastry bonbon cupcake caramels. Muffin muffin jujubes donut",
+    "price": 1.99
+  },
+  {
+    "name": " Butter Baked chocolate",
+    "restaurant": "624977e6df249825f2145514",
+    "category": "icecream",
+    "qty": 100,
+    "restaurant_name": "Cream Bell",
+    "img": "https://i.imgur.com/S9gaQwq.png",
+    "description": "Pecorino smellY cheese melted cheese",
+    "story": "Gummi bears topping pie pastry bonbon cupcake caramels. Muffin muffin jujubes donut",
+    "price": 2.99
+  },
+  {
+    "name": "Butter Pecan With Quinoa",
+    "restaurant": "624977e6df249825f2145514",
+    "category": "icecream",
+    "qty": 100,
+    "restaurant_name": "Cream Bell",
+    "img": "https://i.imgur.com/I8VSQn6.png",
+    "description": "Pecorino smellY cheese melted cheese",
+    "story": "Gummi bears topping pie pastry bonbon cupcake caramels. Muffin muffin jujubes donut",
+    "price": 2.59
+  },
+  {
+    "name": "Candy Cane Grapefruit",
+    "restaurant": "624977e6df249825f2145514",
+    "category": "icecream",
+    "qty": 100,
+    "restaurant_name": "Cream Bell",
+    "img": "https://i.imgur.com/jX0jkU2.png",
+    "description": "Pecorino smellY cheese melted cheese",
+    "story": "Gummi bears topping pie pastry bonbon cupcake caramels. Muffin muffin jujubes donut",
+    "price": 3.99
+  },
+  {
+    "name": "Salmon vanilla Blueberry",
+    "restaurant": "624977e6df249825f2145514",
+    "category": "icecream",
+    "qty": 100,
+    "restaurant_name": "Cream Bell",
+    "img": "https://i.imgur.com/zcRNVMR.png",
+    "description": "Pecorino smellY cheese melted cheese",
+    "story": "Gummi bears topping pie pastry bonbon cupcake caramels. Muffin muffin jujubes donut",
+    "price": 1.69
+  }
+]

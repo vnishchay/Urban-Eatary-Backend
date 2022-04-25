@@ -1,0 +1,67 @@
+[
+    {
+        "category": "shawarma",
+        "name": "Suppli BBQ Chickens",
+        "qty": 100,
+        "restaurant": "624977e6df249825f2145513",
+        "restaurant_name": "Fasoos",
+        "img": "https://i.imgur.com/6gvwxbt.png",
+        "description": "Pecorino smellY cheese melted cheese",
+        "story": "Gummi bears topping pie pastry bonbon cupcake caramels. Muffin muffin jujubes donut",
+        "price": 3.99
+    },
+    {
+        "category": "shawarma",
+        "qty": 100,
+        "restaurant_name": "Fasoos",
+        "name": "Fried Chicken Americana",
+        "restaurant": "624977e6df249825f2145513",
+        "img": "https://i.imgur.com/O0cfCQK.png",
+        "description": "Pecorino smellY cheese melted cheese",
+        "story": "Gummi bears topping pie pastry bonbon cupcake caramels. Muffin muffin jujubes donut",
+        "price": 4.99
+    },
+    {
+        "name": "Tarragol Rubble Mexicana",
+        "category": "shawarma",
+        "qty": 100,
+        "restaurant_name": "Fasoos",
+        "restaurant": "624977e6df249825f2145513",
+        "img": "https://i.imgur.com/NLxqMow.png",
+        "description": "Pecorino smellY cheese melted cheese",
+        "story": "Gummi bears topping pie pastry bonbon cupcake caramels. Muffin muffin jujubes donut",
+        "price": 6.99
+    },
+    {
+        "name": "Roma Naga Beneta",
+        "category": "shawarma",
+        "qty": 100,
+        "restaurant_name": "Fasoos",
+        "img": "https://i.imgur.com/llC8cnj.png",
+        "description": "Pecorino smellY cheese melted cheese",
+        "story": "Gummi bears topping pie pastry bonbon cupcake caramels. Muffin muffin jujubes donut",
+        "price": 5.99
+    },
+    {
+        "name": "Beef Roll Glazed",
+        "category": "shawarma",
+        "qty": 100,
+        "restaurant_name": "Fasoos",
+        "restaurant": "624977e6df249825f2145513",
+        "img": "https://i.imgur.com/KVXsO1M.png",
+        "description": "Pecorino smellY cheese melted cheese",
+        "story": "Gummi bears topping pie pastry bonbon cupcake caramels. Muffin muffin jujubes donut",
+        "price": 6.99
+    },
+    {
+        "name": "Lakasana Soi Glazed",
+        "category": "shawarma",
+        "qty": 100,
+        "restaurant_name": "Fasoos",
+        "restaurant": "624977e6df249825f2145513",
+        "img": "https://i.imgur.com/uhpgvee.png",
+        "description": "Pecorino smellY cheese melted cheese",
+        "story": "Gummi bears topping pie pastry bonbon cupcake caramels. Muffin muffin jujubes donut",
+        "price": 5.99
+    }
+]
