@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-const dotenv = require('dotenv');
+require('dotenv').config();
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const HTTPErrors = require('http-errors');
@@ -28,11 +28,12 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-dotenv.config({ path: './config.env' });
+
 
 app.use(cors());
 
-const DB = process.env.DB;
+const DB = process.env.DB
+console.log(DB)
 
 app.use(paymentRoutes);
 
