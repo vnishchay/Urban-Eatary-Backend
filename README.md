@@ -12,7 +12,7 @@
     <span>
       <a
         className="text-color"
-        href="https://github.com/Yash1256/Urban-Eatery"
+        href="https://github.com/codernishchay/Urban-Eatery-Frontend"
       ></a>
     </span>
   </small>
