@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Iced Guava Pepsi",
+    "category": "drinks",
+    "qty": 100,
+    "restaurant": "624977e6df249825f2145516",
+    "restaurant_name": "Drinker's Bar",
+    "img": "https://i.imgur.com/BMJqNo6.png",
+    "description": "Pecorino smellY cheese melted cheese",
+    "story": "Gummi bears topping pie pastry bonbon cupcake caramels. Muffin muffin jujubes donut",
+    "price": 2.99
+  },
+  {
+    "name": "Cinnamon Coca cola",
+    "category": "drinks",
+    "qty": 100,
+    "restaurant_name": "Drinker's Bar",
+    "restaurant": "624977e6df249825f2145516",
+    "img": "https://i.imgur.com/Yj4w7ij.png",
+    "description": "Pecorino smellY cheese melted cheese",
+    "story": "Gummi bears topping pie pastry bonbon cupcake caramels. Muffin muffin jujubes donut",
+    "price": 2.69
+  },
+  {
+    "name": "Dolce Latte Red Bull",
+    "category": "drinks",
+    "restaurant_name": "Drinker's Bar",
+    "qty": 100,
+    "restaurant": "624977e6df249825f2145516",
+    "img": "https://i.imgur.com/tIknImD.png",
+    "description": "Pecorino smellY cheese melted cheese",
+    "story": "Gummi bears topping pie pastry bonbon cupcake caramels. Muffin muffin jujubes donut",
+    "price": 1.99
+  },
+  {
+    "name": "Starbucks Strawberry Frappuccino",
+    "category": "drinks",
+    "qty": 100,
+    "restaurant_name": "Drinker's Bar",
+    "restaurant": "624977e6df249825f2145516",
+    "img": "https://i.imgur.com/91aNPOB.png",
+    "description": "Pecorino smellY cheese melted cheese",
+    "story": "Gummi bears topping pie pastry bonbon cupcake caramels. Muffin muffin jujubes donut",
+    "price": 2.49
+  },
+  {
+    "name": "Cream Cold Americano",
+    "category": "drinks",
+    "restaurant_name": "Drinker's Bar",
+    "qty": 100,
+    "restaurant": "624977e6df249825f2145516",
+    "img": "https://i.imgur.com/ve3sMZn.png",
+    "description": "Pecorino smellY cheese melted cheese",
+    "story": "Gummi bears topping pie pastry bonbon cupcake caramels. Muffin muffin jujubes donut",
+    "price": 2.69
+  },
+  {
+    "name": "Starbucks Cold Brew",
+    "category": "drinks",
+    "qty": 100,
+    "restaurant_name": "Drinker's Bar",
+    "restaurant": "624977e6df249825f2145516",
+    "img": "https://i.imgur.com/JftzAqb.png",
+    "description": "Pecorino smellY cheese melted cheese",
+    "story": "Gummi bears topping pie pastry bonbon cupcake caramels. Muffin muffin jujubes donut",
+    "price": 2.79
+  }
+]
