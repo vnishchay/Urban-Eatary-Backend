@@ -13,14 +13,14 @@ const userRoutes = require('./routes/userRoute');
 const paymentRoutes = require('./routes/paymentRoute');
 
 //Morgan
-const logger = require('./middlewares/logs');
-app.use(logger);
+// const logger = require('./middlewares/logs');
+// app.use(logger);
 
 //Swagger Doc
 const swaggerUi = require('swagger-ui-express');
 const YAML = require('yamljs');
-const morgan = require('morgan');
-app.use(morgan('dev'));
+// const morgan = require('morgan');
+// app.use(morgan('dev'));
 
 const swaggerDocument = YAML.load('./swagger.yaml');
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
